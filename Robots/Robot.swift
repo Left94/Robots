@@ -30,14 +30,14 @@ class Robot {
     
     func seDeplacer(direction : String) {
         switch direction {
-        case "Haut":
-            positionY += 1
-        case "Bas":
-            positionY -= 1
-        case "Gauche":
-            positionX -= 1
-        case "Droite":
-            positionX += 1
+            case "Haut":
+                positionY += 1
+            case "Bas":
+                positionY -= 1
+            case "Gauche":
+                positionX -= 1
+            case "Droite":
+                positionX += 1
         default: break
             
             
