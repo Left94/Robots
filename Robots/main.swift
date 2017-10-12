@@ -21,11 +21,14 @@ var robot4 = Robot(nom: "Boby")
 
 robots += [robot1,robot2, robot3, robot4]
 
-robot1.seDeplacer(direction: "Haut")
-robot2.seDeplacer(direction: "Bas")
-robot3.seDeplacer(direction: "Gauche")
-robot4.seDeplacer(direction: "Droite")
-for rob in robots{
-    
+robot1.seDeplacer(direction: "Haut", cases: 4)
+
+robot2.seDeplacer(direction: "Bas", cases: 2)
+
+robot3.seDeplacer(direction: "Gauche", cases: 1)
+
+robot4.seDeplacerAleatoirement(nombreDeFois: 4)
+
+for rob in robots {
     rob.sePresenter()
 }

@@ -28,21 +28,35 @@ class Robot {
     
     
     
-    func seDeplacer(direction : String) {
-        switch direction {
-            case "Haut":
-                positionY += 1
-            case "Bas":
-                positionY -= 1
-            case "Gauche":
-                positionX -= 1
-            case "Droite":
-                positionX += 1
-        default: break
+    func seDeplacer(direction : String, cases : Int) {
+        if cases <= vitesseMax{
+            switch direction {
+                case "Haut":
+                    positionY += 1 * cases
+                case "Bas":
+                    positionY -= 1 * cases
+                case "Gauche":
+                    positionX -= 1 * cases
+                case "Droite":
+                    positionX += 1 * cases
+            default: break
             
-            
+            }
+        }else{
+            print(" \(self.nom) : Desolé je ne peux pas me déplacer d' un nombre de case plus elevé que ma vitesse max qui est de \(vitesseMax)")
         }
+    }
+    
+    
+    func seDeplacerAleatoirement(nombreDeFois : Int) {
         
+            positionX += Int(arc4random_uniform(3)) * nombreDeFois
+            positionX -= Int(arc4random_uniform(3)) * nombreDeFois
+            positionY += Int(arc4random_uniform(3)) * nombreDeFois
+            positionY -= Int(arc4random_uniform(3)) * nombreDeFois
     }
     
 }
+    
+
+
